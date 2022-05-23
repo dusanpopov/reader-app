@@ -1,13 +1,133 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a759f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+input {
+  flex-grow: 2;
+  margin: 15px 0;
+  border: 1p solid black;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.close,
+.edit,
+.favorite,
+.trash {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.edit {
+  right: 40px;
+}
+
+.favorite{
+ right: 65px;
+}
+
+.trash{
+ right: 65px;
+}
+
+.btn {
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #202142;
+}
+
+.btn-secondary {
+  background: #ff6a95;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
+}
+
+.btn:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.message {
+  padding-top: 10px;
+  text-align: center;
+  color: rebeccapurple;
+}
+
+@media (max-width: 600px) {
+  .input-group input {
+    width: 80%;
+  }
 }
